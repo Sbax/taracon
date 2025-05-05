@@ -1,0 +1,12 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "paintext": "ts"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.experimental.classRegex": ["className:\\s*\"([^\"]*)\""],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

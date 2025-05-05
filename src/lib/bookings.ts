@@ -1,0 +1,102 @@
+import {
+  appendDataToSheet,
+  deleteRowById,
+  getSheetData,
+  updateRowById,
+} from "@/lib/sheets";
+import { Booking, SheetRange } from "@/types";
+
+const spreadsheetId = process.env.SHEET_ID as string;
+const range = process.env.SHEET_BOOKINGS_RANGE as SheetRange;
+
+type BookingRow = [
+  Booking["id"],
+  Booking["name"],
+  Booking["email"],
+  Booking["seats"],
+  Booking["sessionId"]
+];
+
+export async function getBookings(): Promise<Booking[]> {
+  const bookingsResponse = await getSheetData({
+    spreadsheetId,
+    range,
+  });
+
+  const bookingsRows = bookingsResponse ? bookingsResponse : [];
+
+  const bookings = bookingsRows.map((row) => {
+    const [, id, name, email, seats, sessionId] = row as [
+      string,
+      ...BookingRow
+    ];
+
+    return {
+      id,
+      name,
+      email,
+      seats: Number(seats),
+      sessionId,
+    };
+  });
+
+  return bookings;
+}
+
+export async function getBookingById(
+  id: Booking["id"]
+): Promise<Booking | null> {
+  const data = await getBookings();
+
+  const booking = data.find((booking) => booking.id === id);
+
+  if (!booking) {
+    return null;
+  }
+
+  return booking;
+}
+
+export async function addBooking({
+  id,
+  name,
+  email,
+  seats,
+  sessionId,
+}: Booking) {
+  await appendDataToSheet({
+    spreadsheetId,
+    range,
+    data: [id, name, email, seats, sessionId] as BookingRow,
+  });
+}
+
+export async function updateBooking({
+  id,
+  name,
+  seats,
+  sessionId,
+}: Omit<Booking, "email">) {
+  const newData = [
+    id,
+    name,
+    undefined,
+    seats,
+    sessionId,
+  ] as Partial<BookingRow>;
+
+  return updateRowById({
+    spreadsheetId,
+    range,
+    id,
+    newData,
+  });
+}
+
+export async function deleteBooking(id: Booking["id"]) {
+  return deleteRowById({
+    spreadsheetId,
+    range,
+    id,
+  });
+}

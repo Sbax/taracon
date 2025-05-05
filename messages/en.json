@@ -1,0 +1,87 @@
+{
+  "BookingDetails": {
+    "NotFound": {
+      "ctaLabel": "Create a new booking",
+      "description": "The booking you are looking for does not exist or was deleted"
+    },
+    "title": "Edit booking"
+  },
+  "Components": {
+    "BookingDeleteButton": {
+      "deleteBooking": "Delete the booking",
+      "modal": {
+        "body": "Are you sure you want to delete this booking?",
+        "no": "No",
+        "title": "You are deleting a booking",
+        "yes": "Yes"
+      }
+    },
+    "BookingForm": {
+      "confirm": "Ok",
+      "confirmationSent": "A confirmation email has been sent to the specified email address",
+      "edit": "Edit",
+      "editSubmitted": "Booking updated",
+      "email": "Email",
+      "emailConfirmation": "Confirm Email",
+      "emailInvalid": "Invalid email address",
+      "emailPicked": "Email used during registration",
+      "emailMismatch": "Email addresses do not match",
+      "name": "Name",
+      "required": {
+        "email": "Email is required",
+        "emailConfirmation": "Email confirmation is required",
+        "name": "Name is required",
+        "seats": "The number of seats is required"
+      },
+      "seats": "Number of seats (max {bookableSeats})",
+      "seatsAtLeastOne": "At least one seat is required",
+      "seatsTooMany": "The number of seats exceeds the maximum allowed",
+      "submit": "Submit",
+      "submitted": "Booking created"
+    },
+    "ErrorToast": {
+      "body": "An error occurred. Please try again."
+    },
+    "PrivacyCheckbox": {
+      "closeModal": "Close",
+      "readAndAccept": "I have read and accept the <termsAndConditions>Terms and Conditions</termsAndConditions>"
+    },
+    "SessionCard": {
+      "availableSeats": "Available seats",
+      "master": "Master",
+      "maxPlayers": "For {maxPlayers} players"
+    },
+    "SessionSelector": {
+      "error": "Unexpected error. Please reload the page.",
+      "search": "Search for a session"
+    },
+    "SessionTimeSlotSelector": {
+      "allDays": "Any day",
+      "allTimeSlots": "Any time slot"
+    },
+    "loading": "Loading..."
+  },
+  "Metadata": {
+    "description": "Example of a booking frontend",
+    "title": "Booking Example"
+  },
+  "NotFound": {
+    "ctaLabel": "Go back to the homepage",
+    "description": "The page you are looking for does not exist",
+    "title": "Page not found"
+  },
+  "Session": {
+    "title": "Book a session"
+  },
+  "SessionSelected": {
+    "backButton": "Pick a different session",
+    "noSeatsAvailable": "This session has no available seats",
+    "notFound": "The selected session does not exist"
+  },
+  "email": {
+    "subject": {
+      "create": "Booking Confirmation",
+      "update": "Booking Update Confirmation"
+    }
+  }
+}
