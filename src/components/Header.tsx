@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import logo from "../public/taracon-logo.svg";
 
 export const Header = () => {
   return (
@@ -16,20 +16,6 @@ export const Header = () => {
           height={100}
         />
       </Link>
-
-      <nav className="bg-base-200 rounded-md navbar">
-        <ul className="flex justify-center space-x-2 font-bold menu menu-horizontal">
-          <li>
-            <Link href="#">Link 1</Link>
-          </li>
-          <li>
-            <Link href="#">Link 2</Link>
-          </li>
-          <li>
-            <Link href="#">Link 3</Link>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 };

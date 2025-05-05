@@ -14,10 +14,10 @@ export const SessionTimeSlotSelector: FC<SessionTimeSlotSelectorProps> = ({
   const t = useTranslations("Components.SessionTimeSlotSelector");
 
   return (
-    <>
+    <section className="flex md:flex-row flex-col flex-wrap -m-2">
       <button
         onClick={() => selectTimeSlot(undefined)}
-        className={`btn ${!selectedTimeSlot ? "" : "btn-outline"}`}
+        className={`m-2 btn ${!selectedTimeSlot ? "" : "btn-outline"}`}
       >
         {t("allTimeSlots")}
       </button>
@@ -31,13 +31,13 @@ export const SessionTimeSlotSelector: FC<SessionTimeSlotSelectorProps> = ({
           <button
             key={timeSlot}
             onClick={() => selectTimeSlot(timeSlot)}
-            className={`btn btn-timeslot ${details.className} ${
+            className={`m-2 btn btn-timeslot ${details.className} ${
               selectedTimeSlot === timeSlot ? "" : "btn-timeslot-outline"
             }`}
           >
             {details.label}
           </button>
         ))}
-    </>
+    </section>
   );
 };

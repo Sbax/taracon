@@ -1,11 +1,11 @@
-Hello {{name}},
+Ciao {{name}},
 
-Your reservation is confirmed!
+La tua prenotazione alla TARAcon è confermata!
 
-- **Session:** {{title}}
-- **Time Slot:** {{selectedTimeSlot}}
-- **Number of Seats:** {{seats}}
+- **Sessione:** {{title}}
+- **Orario:** {{selectedTimeSlot}}
+- **Numero di posti:** {{seats}}
 
-You can view or modify your reservation [here]({{bookingLink}}).
+Puoi visualizzare o modificare la tua prenotazione [qui]({{bookingLink}}).
 
-If you have any questions, feel free to contact us at [{{mail}}](mailto:{{mail}}).
+Se hai domande, puoi scrivere a [{{mail}}](mailto:{{mail}}).
