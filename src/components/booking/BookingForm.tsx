@@ -172,7 +172,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({
 
       <ErrorToast error={Boolean(error)} />
 
-      {/* {result && (
+      {result && (
         <dialog className="modal modal-open">
           <div className="modal-box">
             <h3 className="font-bold text-lg">
@@ -186,7 +186,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({
             </div>
           </div>
         </dialog>
-      )} */}
+      )}
     </form>
   );
 };
