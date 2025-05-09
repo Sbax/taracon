@@ -11,7 +11,7 @@ export const timeSlots: Record<TimeSlot, TimeSlotDetails> = {
     className: "timeslot-pink-500",
   },
   2: {
-    label: "Sabato 15 - 19.00",
+    label: "Sabato 15.00 - 19.00",
     className: "timeslot-fuchsia-500",
   },
   3: {
