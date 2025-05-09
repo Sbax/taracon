@@ -48,7 +48,7 @@
     },
     "SessionCard": {
       "availableSeats": "Posti disponibili",
-      "master": "Maestro",
+      "master": "Master",
       "maxPlayers": "Per {maxPlayers} giocatori"
     },
     "SessionSelector": {
